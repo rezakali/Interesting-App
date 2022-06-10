@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+body {
+  background: #f0f0f0;
+}
+h2 {
+  font-size: 18px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  padding: 10px;
+  overflow: hidden;
+  background: url("https://source.unsplash.com/random/1920x1080/?nature")
+    no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  background-color: #fff;
+  z-index: 3;
+}
+main::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+section {
+  width: 90%;
+  margin: 0 auto;
+}
+.random-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.weather-btn {
+  font-size: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 7px;
+  color: #fff;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  animation-name: large;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+.arrow-btn {
+  font-size: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 7px;
+  color: #fff;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: unset;
+  animation-name: down;
+  display: none;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes large {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes down {
+  0% {
+    top: 10px;
+  }
+  50% {
+    top: 12px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+.main-content {
+  width: 45%;
+}
+.jokes-wrapper,
+.quotes-wrapper {
+  width: 24%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 7px;
+  color: #fff;
+}
+.jokes-wrapper h2,
+.quotes-wrapper h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.jokes-wrapper h3,
+.quotes-wrapper h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.jokes-wrapper p,
+.quotes-wrapper p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.jokes-wrapper button,
+.quotes-wrapper button {
+  background-color: transparent;
+  color: #fff;
+}
+
+.btns-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+button {
+  padding: 10px 25px;
+  display: block;
+  background: #d61c4e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: auto;
+  transition: all 0.5s linear;
+}
+.cardbtn.active,
+button:hover {
+  background: #34b3f1;
+  opacity: 0.8;
+}
+.jokes-wrapper button:hover i,
+.quotes-wrapper button:hover i {
+  transform: rotate(60deg);
+}
+#getcat,
+#getdog {
+  font-size: 30px;
+}
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 2rem;
+  position: relative;
+}
+.cat-wrapper,
+.dog-wrapper {
+  width: 300px;
+  overflow: hidden;
+  background: rgba(255, 255, 225, 0.6);
+  border-radius: 16px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+  min-height: 450px;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0);
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+.cat-wrapper.active,
+.animal-wrap.active,
+.dog-wrapper.active {
+  transform: scale(1);
+  position: absolute;
+  top: 40px;
+  opacity: 1;
+}
+.img-wrapper {
+  border-radius: 16px;
+  width: 100%;
+  border: 3px dashed #dbdbdb;
+  margin-bottom: 16px;
+  padding: 10px;
+}
+.img-wrapper img {
+  border-radius: 10px;
+  max-height: 200px;
+}
+.cat-wrapper button,
+.dog-wrapper button {
+  width: 100%;
+}
+.animal-info {
+  text-align: left;
+  margin-top: auto;
+}
+.animal-info p {
+  font-weight: 600;
+}
+.animal-info span {
+  font-weight: 400;
+}
+.animal-wrap button {
+  margin-top: 10px;
+}
+
+@media (max-width: 1199px) {
+  main {
+    height: 100%;
+    padding: 30px;
+  }
+  section {
+    width: 100%;
+  }
+  .random-wrapper {
+    flex-direction: column;
+  }
+  .main-content {
+    width: 100%;
+    order: 1;
+    min-height: 550px;
+  }
+  .jokes-wrapper,
+  .quotes-wrapper {
+    order: 2;
+    width: 60%;
+  }
+  button {
+    margin: 0px;
+  }
+  .cat-wrapper,
+  .dog-wrapper {
+    min-height: auto;
+  }
+  .cat-wrapper button,
+  .dog-wrapper button {
+    margin-top: auto;
+  }
+  .jokes-wrapper button,
+  .quotes-wrapper button {
+    margin: 0 auto;
+  }
+  .arrow-btn {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  main {
+    padding: 15px;
+  }
+  .btns-wrapper {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  button {
+    font-size: 12px;
+    padding: 6px 15px;
+    border-radius: 6px;
+  }
+  .cat-wrapper,
+  .dog-wrapper {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  .card-wrapper {
+    padding: auto;
+    gap: 1rem;
+  }
+  .cat-wrapper.active,
+  .animal-wrap.active,
+  .dog-wrapper.active {
+    top: 15px;
+  }
+  .jokes-wrapper,
+  .quotes-wrapper {
+    width: 100%;
+  }
+  .weather-btn {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 3px;
+    top: 5px;
+    right: 5px;
+  }
+  .arrow-btn {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 3px;
+    top: 5px;
+    left: 5px;
+  }
+}

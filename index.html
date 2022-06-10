@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interesting App</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <section>
+            <div class="random-wrapper">
+                <a href="https://weather-rezak.netlify.app/" target="_blank" class="weather-btn"><i class="fas fa-cloud-sun"></i></a>
+                <a href="#quotes" class="arrow-btn"><i class="far fa-arrow-alt-circle-down"></i></a>
+                <div class="quotes-wrapper" >
+                    <h2  id="quotes">Quotes</h2>
+                    <h3 >" <span id="quote">"Loading..."</span> "</h3>
+                    <p id="quoteauthor">...Loading</p>
+                    <button id="quotebtn"><i class="fas fa-sync-alt"></i></button>
+                </div>
+                <div class="main-content">
+                    <div class="btns-wrapper">
+                        <button class="cardbtn active">
+                            Random Cats
+                        </button>
+                        <button class="cardbtn">
+                            Random Dogs
+                        </button>
+                        <button class="cardbtn">
+                            Random Animals
+                        </button>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="cat-wrapper active" id="card1">
+                            <div class="img-wrapper">
+                                <img src="" alt=""  id="catholder">
+                            </div>
+                            <!-- <a href=""  id="link">DownLoad</a> -->
+                            <button type="button" id="getcat">😺</button>
+                        </div>
+                        <div class="dog-wrapper" id="card2">
+                            <div class="img-wrapper">
+                                <img src="" alt="" id="dogholder">
+                            </div>
+                            <!-- <a href=""  id="link">DownLoad</a> -->
+                            <button type="button" id="getdog">🐶</button>
+                        </div>
+                        <div class="dog-wrapper animal-wrap" id="card3">
+                            <div class="img-wrapper">
+                                <img src="" alt="" id="animalholder">
+                            </div>
+                            <div class="animal-info">
+                                <h2>Name : <span  id="animalname"></span></h2>
+                                <h4>Type : <span id="animaltype"></span></h4>
+                                <p>Life Span : <span id="animalspan"></span></p>
+                                <p>Habitat : <span id="animalhabitat"></span></p>
+                                <p>Places Found : <span id="animallocation"></span></p>
+                            </div>
+                            <button type="button" id="getanimal">Random Animal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="jokes-wrapper">
+                    <h2>Jokes</h2>
+                    <h3 id="joke">"Loading..." </h3>
+                    <p id="jokeauthor">...Loading</p>
+                    <button id="jokebtn"><i class="fas fa-sync-alt"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./main.js"></script>
+</body>
+
+</html>
